@@ -5,7 +5,6 @@ class UsersController < ApplicationController
                                         :following, :followers]
 
 
-
   def new
     @user = User.new
   end
