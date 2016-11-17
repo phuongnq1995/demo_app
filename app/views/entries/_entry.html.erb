@@ -16,5 +16,23 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
-  </session>
+    <% if @feed_comment_items.any? %>
+      <ol class="comments">
+        <%= render @feed_comment_items %>
+      </ol>
+      <%= will_paginate @comments %>
+    <% end %>
+    <% if !entry.nil? %>
+      <section class="comment_form">
+         <%= form_for Comment.new do |f| %>
+          <%= render 'shared/error_messages', object: f.object %>
+          <div class="field">
+            <%= f.text_area :content, placeholder: "Compose new comment..." %>
+          </div>
+          <%= hidden_field_tag :entry_id, entry.id %>
+          <%= f.submit "Post", class: "btn btn-primary" %>
+        <% end %>
+      </section>
+    <% end %>  
+    </session>
 </li>

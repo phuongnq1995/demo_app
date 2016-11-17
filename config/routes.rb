@@ -13,7 +13,8 @@ Rails.application.routes.draw do
     end
   end
   resources :entries        
-  resources :relationships,       only: [:create, :destroy]    
+  resources :relationships,       only: [:create, :destroy]   
+  resources :comments,            only: [:create, :destroy]   
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
