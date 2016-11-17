@@ -10,7 +10,7 @@ class Entry < ActiveRecord::Base
   	Entry.find_by(:entry).destroy
   end
 
-  def feed
+  def feed_comments
     Comment.where("entry_id IN (?)", id)
   end
 

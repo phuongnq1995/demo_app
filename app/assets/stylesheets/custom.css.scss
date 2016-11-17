@@ -287,3 +287,30 @@ span.picture {
 }
 /* follow_form */
 #follow_form{margin-top:15px;}
+.Comments {
+  list-style: none;
+  padding: 0;
+  li {
+    padding: 10px 0;
+  }
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+  .content {
+    margin-left: 10px;
+    img {
+      padding: 5px 0;
+    }
+  }
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 10px;
+  }
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}

@@ -20,7 +20,7 @@
       <ol class="comments">
         <%= render @feed_comment_items %>
       </ol>
-      <%= will_paginate @comments %>
+      <%= will_paginate @feed_comment_items %>
     <% end %>
     <% if !entry.nil? %>
       <section class="comment_form">
