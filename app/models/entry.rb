@@ -4,5 +4,7 @@ class Entry < ActiveRecord::Base
   validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
 
-
+  def delete_entry
+  	Entry.find_by(:entry).destroy
+  end
 end

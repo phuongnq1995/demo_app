@@ -121,7 +121,8 @@ footer {
 
 .gravatar {
   float: left;
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-top:10px;
 }
 
 .gravatar_edit {
@@ -166,7 +167,7 @@ footer {
   padding: 0;
 } 
 /* forms */
-  
+
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -283,3 +284,5 @@ span.picture {
     border: 0;
   }
 }
+/* follow_form */
+#follow_form{margin-top:15px;}
