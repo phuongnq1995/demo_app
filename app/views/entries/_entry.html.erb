@@ -1,9 +1,14 @@
 <li id="entry-<%= entry.id %>">
-  <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
-  <span class="user"><%= link_to entry.user.name, entry.user %></span>
-  <span class="content">
-    <%= entry.content %>
-  </span>
+  <aside class="col-md-3">
+    <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
+    <span class="user"><%= link_to entry.user.name, entry.user %>
+    </span>
+  </aside>
+  <session class="col-md-8 entries-details">
+  <div class="panel panel-default">
+  <div class="panel-heading"><%= entry.title%></div>
+  <div class="panel-body"><%= entry.content %></div>
+  </div>
   <span class="timestamp">
     Posted <%= time_ago_in_words(entry.created_at) %> ago.
     <% if current_user?(entry.user) %>
@@ -11,4 +16,5 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
+  </session>
 </li>
