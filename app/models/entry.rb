@@ -11,7 +11,7 @@ class Entry < ActiveRecord::Base
   end
 
   def feed_comments
-    Comment.where("entry_id IN (?)", id)
+    Comment.where("entry_id = ?", id)
   end
 
 end

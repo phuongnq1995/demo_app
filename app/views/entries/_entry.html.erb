@@ -16,11 +16,10 @@
                                        data: { confirm: "You sure?" } %>
     <% end %>
   </span>
-    <% if @feed_comment_items.any? %>
+    <% if entry.comments.any? %>
       <ol class="comments">
-        <%= render @feed_comment_items %>
+        <%= render entry.comments %>
       </ol>
-      <%= will_paginate @feed_comment_items %>
     <% end %>
     <% if !entry.nil? %>
       <section class="comment_form">
