@@ -1,12 +1,12 @@
 <li id="entry-<%= entry.id %>">
   <aside class="col-md-3">
     <%= link_to gravatar_for(entry.user, size: 50), entry.user %>
-    <span class="user"><%= link_to entry.user.name, entry.user %>
+    <span class="user"><%= link_to entry.user.name.upcase, entry.user %>
     </span>
   </aside>
   <session class="col-md-8 entries-details">
   <div class="panel panel-default">
-  <div class="panel-heading"><%= entry.title%></div>
+  <div class="panel-heading title-entry"><%= entry.title%></div>
   <div class="panel-body"><%= entry.content %></div>
   </div>
   <span class="timestamp">

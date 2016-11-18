@@ -13,11 +13,11 @@ class EntriesController < ApplicationController
     end
   end
 
-  def show
-    @entry = Entry.find(params[:id])
-    @comments = @entry.comments.paginate(page: params[:page])
-    render 'static_pages/home'
-  end
+  # def show
+  #   @entry = Entry.find(params[:id])
+  #   @comments = @entry.comments.paginate(page: params[:page])
+  #   render 'static_pages/home'
+  # end
 
   def destroy
       @entry.destroy
