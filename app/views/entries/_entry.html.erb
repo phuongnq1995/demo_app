@@ -25,7 +25,7 @@
       <section class="comment_form">
          <%= form_for Comment.new do |f| %>
           <%= render 'shared/error_messages', object: f.object %>
-          <div class="field">
+          <div class="field-comment">
             <%= f.text_area :content, placeholder: "Compose new comment..." %>
           </div>
           <%= hidden_field_tag :entry_id, entry.id %>
